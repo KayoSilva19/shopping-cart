@@ -9,7 +9,6 @@ export function Products() {
     getProducts('Iphone').then((products) => setProducts(products))
   }, [])
 
-  console.log(products)
   return (
     <section className="p-[120px_20px_50px] flex flex-wrap gap-10">
       {products.map((product) => (
