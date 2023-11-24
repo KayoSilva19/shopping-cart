@@ -1,5 +1,13 @@
+import { Header } from './components/Header'
+import { Wrapper } from './components/Wrapper'
+
 function App() {
-  return <>teste</>
+  return (
+    <>
+      <Header />
+      <Wrapper></Wrapper>
+    </>
+  )
 }
 
 export default App
