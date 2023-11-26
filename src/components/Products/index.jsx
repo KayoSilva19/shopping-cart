@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { getProducts } from '../../api/getProducts'
 import { ProductCard } from '../ProductCard'
 import { Loading } from '../Loading'
+import { AppContext } from '../../context/AppContext'
 
 export function Products() {
-  const [products, setProducts] = useState([])
-  const [loading, setLoading] = useState(true)
+  const { products, setProducts, loading, setLoading } = useContext(AppContext)
 
   useEffect(() => {
     getProducts('Iphone').then((products) => {
       setProducts(products)
       setLoading(false)
     })
-  })
+  }, [])
 
   return (
     (loading && <Loading />) || (

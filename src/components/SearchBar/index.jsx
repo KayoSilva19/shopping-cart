@@ -1,10 +1,27 @@
 import { MagnifyingGlass } from '@phosphor-icons/react'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { getProducts } from '../../api/getProducts'
+import { AppContext } from '../../context/AppContext'
 
 export function SearchBar() {
   const [searchValue, setSearchValue] = useState('')
+
+  const { setProducts, setLoading } = useContext(AppContext)
+
+  async function handleSearch(e) {
+    e.preventDefault()
+    setLoading(true)
+    const products = await getProducts(searchValue)
+
+    setProducts(products)
+    setSearchValue('')
+    setLoading(false)
+  }
   return (
-    <form className="max-w-[500px] w-full flex bg-white  gap-3  pr-4 justify-between drop-shadow-md">
+    <form
+      onSubmit={handleSearch}
+      className="max-w-[500px] w-full flex bg-white  gap-3  pr-4 justify-between drop-shadow-md"
+    >
       <input
         type="search"
         placeholder="Buscar Produtos"
