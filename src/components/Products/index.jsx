@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import { getProducts } from '../../api/getProducts'
 import { ProductCard } from '../ProductCard'
 import { Loading } from '../Loading'

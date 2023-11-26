@@ -1,3 +1,4 @@
+import { Cart } from './components/Cart/Index'
 import { Header } from './components/Header'
 import { Products } from './components/Products'
 import { Wrapper } from './components/Wrapper'
@@ -10,6 +11,7 @@ function App() {
       <Wrapper>
         <Products />
       </Wrapper>
+      <Cart />
     </Provider>
   )
 }
