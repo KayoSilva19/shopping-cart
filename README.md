@@ -36,4 +36,5 @@ $ npm install
 ```
 $ npm run dev
 ```
-
+## Project link running:
+<a target="_blank" href="https://shopping-cart-peach-kappa.vercel.app/">Project Link</a>
