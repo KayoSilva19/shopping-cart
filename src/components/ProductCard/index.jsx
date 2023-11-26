@@ -10,7 +10,7 @@ export function ProductCard({ product }) {
     <aside className="max-w-[300px] w-full bg-white flex flex-col cursor-pointer m-[0_auto] hover:drop-shadow-lg relative group">
       <img className="w-full" src={thumbnailFormated} alt="Product" />
 
-      <div className="border border-t-zinc-200 p-5 ">
+      <div className="border-t border-t-zinc-200 p-5 ">
         <h2 className="font-medium text-zinc-800 text-[30px]">
           {formatCurrency(price, 'BRL')}
         </h2>
