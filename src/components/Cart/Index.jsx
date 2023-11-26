@@ -5,7 +5,7 @@ import { formatCurrency } from '../../utils/formatCurrency'
 import { WarningCircle } from '@phosphor-icons/react'
 
 export function Cart() {
-  const { cartItems, setCartItem } = useContext(AppContext)
+  const { cartItems } = useContext(AppContext)
   const totalPrice = cartItems.reduce((acc, item) => item.price + acc, 0)
 
   const { isCardVisible } = useContext(AppContext)
@@ -13,7 +13,7 @@ export function Cart() {
   const openCartStyle = isCardVisible ? 'translate-x-[0]' : 'translate-x-[110%]'
   return (
     <section
-      className={`w-full max-w-sm bg-white h-screen fixed top-0 right-0 px-5 pt-28 pb-5 flex flex-col justify-between ${openCartStyle}  transition-all duration-150 ease-linear drop-shadow-md`}
+      className={`w-full max-w-sm bg-white h-screen fixed top-0 right-0 px-5 pt-28 max-sm:pt-40 pb-5 flex flex-col justify-between ${openCartStyle}  transition-all duration-150 ease-linear drop-shadow-md`}
     >
       <div className=" grow overflow-auto">
         {cartItems.length === 0 && (
