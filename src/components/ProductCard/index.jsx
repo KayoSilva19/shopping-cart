@@ -16,7 +16,7 @@ export function ProductCard({ product }) {
         </h2>
         <h2 className="mt-2  text-zinc-700">{title}</h2>
       </div>
-      <button className="hidden absolute top-3 right-3 text-blue-700 group-hover:flex transition-all ">
+      <button className="hidden absolute top-5 right-5 text-blue-700 group-hover:flex group-hover:bg-slate-100 group-hover:p-4 group-hover:rounded-full transition-all ">
         <ShoppingCart size={24} weight="fill" />
       </button>
     </aside>
